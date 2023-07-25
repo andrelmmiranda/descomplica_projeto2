@@ -1,0 +1,26 @@
+.badge{
+    position: relative;
+}
+
+.icon{
+    font-size: 24px;
+}
+
+.numberOfElements{
+    font-size: 12px;
+    color: aliceblue;
+
+    position: absolute;
+    top: -10px;
+    right: -10px;
+
+    
+    border-radius: 100%;
+    background-color: rgb(230, 66, 37);
+
+    min-width: 16px;
+    min-height: 16px;
+
+    padding: 0;
+    margin: 0;
+}
