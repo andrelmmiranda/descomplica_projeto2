@@ -10,7 +10,7 @@ export function Header() {
   return (
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container>
-        <Navbar.Brand href="#">Navbar</Navbar.Brand>
+        <Navbar.Brand href="#">Loja Online</Navbar.Brand>
         <span className={styles.badge}>
           <FontAwesomeIcon className={styles.icon} icon={faCartShopping} />
           <p className={styles.numberOfElements}>0</p>
