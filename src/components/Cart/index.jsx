@@ -2,10 +2,14 @@ import styles from './styles.module.css';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export function Cart(){
   const [cart, setCart] = useState([]);
+
+  useEffect(()=>{
+    setCart(JSON.parse(localStorage.getItem("db")));
+  }, []) 
 
   return(
     <section id="cart">
