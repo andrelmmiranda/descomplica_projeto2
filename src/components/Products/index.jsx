@@ -6,15 +6,15 @@ import { Product } from '../Product';
 import { productList } from '../../products/productList';
 
 
-export function Products({setCart}){
+export function Products({ setCart }){
   return(
     <section id="products">
-      <Container className={styles.main}>
-        <h3 className={styles.title}>Produtos</h3>
+      <Container className={ styles.main }>
+        <h3 className={ styles.title }>Produtos</h3>
         <Row>
-          {productList.map(i => <Col key={i.id}><Product setCart={setCart} product={i}/></Col>)}
+          { productList.map(i => <Col key={ i.id }><Product setCart={ setCart } product={ i }/></Col>) }
         </Row>
       </Container>
     </section>
-  )
+  );
 }

@@ -10,10 +10,10 @@ export function Cart({ cart, setCart }){
         <h3 className={styles.title}>Carrinho</h3>
         {
           cart.length === 0 ? 
-            <p>Carrinho está vazio!</p> :
-            <CartList cart={ cart } setCart={ setCart }/> 
+          <p>Carrinho está vazio!</p> :
+          <CartList cart={ cart } setCart={ setCart }/> 
         }
       </Container>
     </section>
-  )
+  );
 }

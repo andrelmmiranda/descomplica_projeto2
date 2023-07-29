@@ -11,8 +11,6 @@ function App() {
   const dbLocal = JSON.parse(localStorage.getItem('db'));
   const [cart, setCart] = useState(dbLocal === null ? [] : dbLocal);
 
-  console.log(cart.length)
-
   useEffect(()=>{
     const db = localStorage.getItem('db');
     if(!db) localStorage.setItem("db",JSON.stringify([]));
