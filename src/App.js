@@ -8,17 +8,15 @@ import { useEffect, useState } from 'react';
 
 
 function App() {
-  const [cart, setCart] = useState([]);
+  const dbLocal = JSON.parse(localStorage.getItem('db'));
+  const [cart, setCart] = useState(dbLocal === null ? [] : dbLocal);
+
+  console.log(cart.length)
 
   useEffect(()=>{
     const db = localStorage.getItem('db');
     if(!db) localStorage.setItem("db",JSON.stringify([]));
   }, []);
-
-  const handleCart = (arg)=>{
-    setCart(arg);
-  }
-  
 
   return (
     <div className="App">
@@ -26,8 +24,8 @@ function App() {
         <Header cart={cart} />
         <Routes>  
           <Route >
-            <Route path="/" element={<Products setCart={handleCart} />} />
-            <Route path="/cart" element={<Cart />} />
+            <Route path="/" element={<Products setCart={setCart} />} />
+            <Route path="/cart" element={<Cart cart={cart} setCart={setCart}/>} />
           </Route>
         </Routes>
       </BrowserRouter>
